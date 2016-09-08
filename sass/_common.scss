@@ -1,0 +1,160 @@
+	@import 'vars';
+
+	// COMMON STYLES
+
+	* {
+		box-sizing: border-box;
+	}
+
+	html, body {
+		font-size: 100%;
+	}
+
+	/* Clearfix Class */
+	.clearfix {
+	    *zoom: 1;
+	}
+
+	.clearfix:after {
+	    content: "";
+	    display: block;
+	    height: 0;
+	    visibility: hidden;
+	    clear: both;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: $museo500, sans-serif;
+	}
+
+	// HEADER SECTION 
+	#header {
+		
+	}
+
+
+	nav .menu {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		background-color: #333;
+		letter-spacing: -0.3em;
+	}
+
+	nav .menu li {
+		display: inline-block;
+		letter-spacing: normal;
+	}
+
+	nav .menu li:last-child{
+		background-color: green;
+		float: right;
+	}
+
+	nav .menu li a {
+		
+		color: white;
+		padding: 1.25em; /* 20/16 */
+		display: block;
+		text-decoration: none;
+		
+		@include transition(background-color, .3s, ease-out);
+	}
+
+	nav .menu li a:hover {
+		background-color: #999;
+	}
+
+	.test {
+		border: 0.1875em solid #000; /* 3/16 */
+		width: 20%;
+		float: left;
+		margin-top: 1.25em; /* 20/16 */
+	}
+
+	li:last-child {
+		background-color: yellow;
+	}
+
+	.parent h1:last-of-type {
+		background-color: yellow;
+	}
+
+	p {
+		clear: both;
+	}
+
+	ul#listing {
+		color: tomato !important;
+		font-size: 2em;
+	}
+
+	li.item {
+		color: #ccc;
+		font-size: 2em;
+	}
+
+	#listing li:first-child {
+		font-size: 1rem;
+	}
+
+	#listing li:last-child {
+		font-size: 4em; /* 64/16 */
+	}
+
+
+	
+	p em:first-child {
+  color: lime;
+}
+	
+
+
+
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.test {
+		color: #000;
+	}
