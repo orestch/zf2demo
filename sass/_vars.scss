@@ -1,24 +1,7 @@
 // VARS
 // Fonts
-$museo300: 'Museo Sans Cyrl 300';
-$museo500: 'Museo Sans Cyrl 500';
-$museo700: 'Museo Sans Cyrl 700';
-$museo900: 'Museo Sans Cyrl 900';
-$museo100i: 'Museo Sans Cyrl 100 Italic';
-$museo500i: 'Museo Sans Cyrl 500 Italic';
-
-$museoregular: "MuseoSansRegular";
-$museobold: "MuseoSansBold";
-$museoitalic: "MuseoSansItalic";
-$museolight: "MuseoSansLight";
-$museomedium: "MuseoSansMedium";
-$museoblack: "MuseoSansBlack";
-$museobolditalic: "MuseoSansBoldItalic";
-$museomediumitalic: "MuseoSansMediumItalic";
-$museolightitalic: "MuseoSansLightItalic";
-$museoblackitalic: "MuseoSansBlackItalic";
-$fontstack: "Helvetica, Arial, sans-serif";
-
+$font-stack: MuseoSans, cursive, Arial, sans-serif;
+$browser-context: 16; // Default
 
 // Colors
 $white: #fff;
@@ -32,15 +15,13 @@ $light-grey-info: #9b9b9b;
 $middle-grey-aside: #4a4a4a;
 
 // FUNCTIONS
-$browser-context: 16; // Default
-
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
 
 // MIXINS
 @mixin opacity($opacity) {
-	/* IE 8 */
+  /* IE 8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity*100)";
   /* IE 5-7 */
   filter: alpha(opacity=$opacity*100);
@@ -52,18 +33,31 @@ $browser-context: 16; // Default
   opacity: $opacity;
 }
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -o-border-radius: $radius;
-  border-radius: $radius;
-}
 
 @mixin transition($property, $duration, $timing-function, $delay:"") {
-	-webkit-transition: $property $duration $timing-function #{$delay};
-	-moz-transition: $property $duration $timing-function #{$delay};
-	-ms-transition: $property $duration $timing-function #{$delay}; /* IE10 is actually unprefixed */
-	-o-transition: $property $duration $timing-function #{$delay};
-	transition: $property $duration $timing-function #{$delay};
+  -webkit-transition: $property $duration $timing-function #{$delay};
+  -moz-transition: $property $duration $timing-function #{$delay};
+  -ms-transition: $property $duration $timing-function #{$delay}; /* IE10 is actually unprefixed */
+  -o-transition: $property $duration $timing-function #{$delay};
+  transition: $property $duration $timing-function #{$delay};
 }
+
+@mixin text-shadow($xshift, $yshift, $blur, $color) {
+
+}
+
+// HELPER CLASSES
+  /* Clearfix Class */
+  .cf {
+      *zoom: 1;
+  }
+
+  .cf:after {
+      content: "";
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+  }
+
+  
